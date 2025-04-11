@@ -1,9 +1,15 @@
-import { cn } from "@/lib/utils"
-import { ArrowRight, Bot, CheckCircle, FileText, ShieldCheck, Zap } from "lucide-react"
+import { cn } from "@/lib/utils";
+import {
+  ArrowRight,
+  Bot,
+  CheckCircle,
+  FileText,
+  ShieldCheck,
+  Zap,
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import Testimonials from "@/components/testimonials"
-
+import { Button } from "@/components/ui/button";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -14,17 +20,23 @@ export default function Home() {
           <div className="flex flex-col items-center text-center">
             <div className="max-w-3xl">
               <div className="mb-6 inline-flex items-center rounded-full border border-border bg-background/80 px-3 py-1 text-sm backdrop-blur-sm">
-                <span className="mr-2 rounded-full bg-[#3882f6] px-2 py-0.5 text-xs font-semibold text-white">NEW</span>
-                <span className="text-muted-foreground">AI-powered compliance management</span>
+                <span className="mr-2 rounded-full bg-[#3882f6] px-2 py-0.5 text-xs font-semibold text-white">
+                  NEW
+                </span>
+                <span className="text-muted-foreground">
+                  AI-powered compliance management
+                </span>
               </div>
 
               <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
-                Compliance management <span className="text-[#3882f6]">simplified</span> for medical devices
+                Compliance management{" "}
+                <span className="text-[#3882f6]">simplified</span> for medical
+                devices
               </h1>
 
               <p className="mb-8 text-xl text-muted-foreground">
-                Streamline your regulatory compliance with our AI-enhanced platform designed specifically for medical
-                device companies.
+                Streamline your regulatory compliance with our AI-enhanced
+                platform designed specifically for medical device companies.
               </p>
 
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -45,17 +57,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </section>
 
       {/* AI Features Section */}
       <section className="bg-muted/20 py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">AI-Powered Compliance Management</h2>
+            <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
+              AI-Powered Compliance Management
+            </h2>
             <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-              Our platform leverages artificial intelligence to streamline your compliance processes, reduce manual
-              work, and provide actionable insights.
+              Our platform leverages artificial intelligence to streamline your
+              compliance processes, reduce manual work, and provide actionable
+              insights.
             </p>
           </div>
 
@@ -105,7 +119,9 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#3882f6]/10">
                   <feature.icon className="h-6 w-6 text-[#3882f6]" />
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-foreground">{feature.title}</h3>
+                <h3 className="mb-3 text-xl font-semibold text-foreground">
+                  {feature.title}
+                </h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
@@ -122,8 +138,8 @@ export default function Home() {
                 Boost your productivity with AI-powered compliance
               </h2>
               <p className="mb-8 text-xl text-muted-foreground">
-                ComplianceMedQRA's AI-driven platform helps medical device companies achieve compliance faster and with
-                fewer resources.
+                ComplianceMedQRA's AI-driven platform helps medical device
+                companies achieve compliance faster and with fewer resources.
               </p>
 
               <div className="space-y-6">
@@ -146,18 +162,22 @@ export default function Home() {
                       <CheckCircle className="h-5 w-5 text-[#3882f6]" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-foreground">{item.stat}</div>
-                      <p className="text-muted-foreground">{item.description}</p>
+                      <div className="text-2xl font-bold text-foreground">
+                        {item.stat}
+                      </div>
+                      <p className="text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
 
               <Button
-                className="mt-8 rounded-full bg-[#3882f6] px-6 py-2 font-medium text-white hover:bg-blue-600"
+                className="block mt-8 rounded-full bg-[#3882f6] px-6 py-2 font-medium text-white hover:bg-blue-600 mx-auto sm:mx-0"
                 size="lg"
               >
-                See how it works
+                See how it works 
               </Button>
             </div>
 
@@ -194,13 +214,15 @@ export default function Home() {
                     key={i}
                     className={cn(
                       "rounded-lg border p-4",
-                      process.highlight ? "border-[#3882f6] bg-[#3882f6]/5" : "border-border bg-background",
+                      process.highlight
+                        ? "border-[#3882f6] bg-[#3882f6]/5"
+                        : "border-border bg-background"
                     )}
                   >
                     <h3
                       className={cn(
                         "mb-3 text-lg font-semibold",
-                        process.highlight ? "text-[#3882f6]" : "text-foreground",
+                        process.highlight ? "text-[#3882f6]" : "text-foreground"
                       )}
                     >
                       {process.title}
@@ -211,7 +233,7 @@ export default function Home() {
                           <div
                             className={cn(
                               "mt-0.5 h-4 w-4 flex-shrink-0 rounded-full",
-                              process.highlight ? "bg-[#3882f6]/20" : "bg-muted",
+                              process.highlight ? "bg-[#3882f6]/20" : "bg-muted"
                             )}
                           />
                           <span className="text-muted-foreground">{step}</span>
@@ -219,8 +241,17 @@ export default function Home() {
                       ))}
                     </ul>
                     <div className="flex items-center justify-between border-t border-border pt-2 text-sm">
-                      <span className="font-medium text-muted-foreground">Total Time:</span>
-                      <span className={cn("font-bold", process.highlight ? "text-[#3882f6]" : "text-foreground")}>
+                      <span className="font-medium text-muted-foreground">
+                        Total Time:
+                      </span>
+                      <span
+                        className={cn(
+                          "font-bold",
+                          process.highlight
+                            ? "text-[#3882f6]"
+                            : "text-foreground"
+                        )}
+                      >
                         {process.totalTime}
                       </span>
                     </div>
@@ -238,9 +269,12 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-[#3882f6] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6">
-          <h2 className="text-3xl font-bold sm:text-4xl">Ready to transform your compliance process?</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Ready to transform your compliance process?
+          </h2>
           <p className="mx-auto mt-4 max-w-2xl text-xl text-blue-100">
-            Join hundreds of medical device companies that trust ComplianceMedQRA's AI-powered platform
+            Join hundreds of medical device companies that trust
+            ComplianceMedQRA's AI-powered platform
           </p>
           <div className="mt-10">
             <Button
@@ -253,5 +287,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }
