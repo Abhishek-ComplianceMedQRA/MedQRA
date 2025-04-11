@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import Logo from "../public/favicon-transparent.png"
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-card py-12">
@@ -8,10 +8,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <div className="relative h-8 w-8">
-                <div className="absolute h-8 w-8 rounded-full bg-[#3882f6]"></div>
-                <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-background"></div>
+              
+                <img src={Logo.src} alt="ComplianceMedQRA Logo" />
+              
               </div>
-              <span className="text-xl font-bold text-foreground">ComplianceMedQRA</span>
+              <span className="text-xl font-bold text-[#3882f6]">ComplianceMedQRA</span>
             </Link>
             <p className="mt-4 text-muted-foreground">
               Empowering medical device companies with intelligent AI-driven compliance solutions.
