@@ -57,3 +57,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 5 - 2rem * 4)); /* 5 testimonials with only 4 gaps */
+  }
+}
